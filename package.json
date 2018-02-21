@@ -1,0 +1,35 @@
+{
+  "name": "react-bg-video",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "clean": "rm-cli build/*",
+    "start": "npm run clean && concurrently \"npm run build:dev\" \"npm run prettier:watch\"",
+    "prettier:watch": "onchange 'lib/**/*.js' 'rollup.config.js' -- prettier --write {{changed}}",
+    "build:dev": "parcel src/index.html -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseph-tohdjojo/react-background-video.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseph-tohdjojo/react-background-video/issues"
+  },
+  "homepage": "https://github.com/joseph-tohdjojo/react-background-video#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "onchange": "^3.3.0",
+    "parcel-bundler": "^1.6.2",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "rm-cli": "^1.4.2"
+  }
+}
